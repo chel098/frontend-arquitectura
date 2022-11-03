@@ -1,0 +1,12 @@
+<app-index></app-index>
+    <div *ngFor ="let item of listventa ">
+        <ul >
+          <li class="titleName"> <strong>{{item.fecha}} </strong></li>
+          <li class="titleValue"> {{item.cantidad}}</li>
+          <li class="titleValue"> {{item.precio_Total}}</li>
+          <li class="titleValue"> {{item.producto_CPD}}</li>
+          <li class="titleValue"> {{item.cliente_CC}}</li>
+          <li> <button (click)="delete(item.cv);" >Eliminar</button> </li>
+          <li> <button routerLink="../updateVenta/{{item.cv}}" >Actualizar</button> </li>
+        </ul>
+    </div>

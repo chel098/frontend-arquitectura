@@ -1,0 +1,67 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <a href="/">
+          <img src="/favicon.ico" alt="Avatar" class="avatar"/>
+        </a>
+        <h1>E-STORE</h1>
+        <span class="example-spacer"></span>
+        <div>
+          <a mat-button [routerLink]="'/venta'"> Venta </a>
+          <a mat-button [routerLink]="'/producto'"> Producto </a>
+<!--          <a mat-button [routerLink]="'/main/countries'"> Datos </a>-->
+<!--          <a mat-button [routerLink]="'/main/predict'"> Predicciones </a>-->
+          <a mat-button [routerLink]="'/crearVenta'"> Crear venta </a>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<form [formGroup]="formVenta" (ngSubmit)="saveVenta()" autocomplete="off">
+  <mat-dialog-content>
+
+    <div class="row">
+      <div class="col-md-12">
+        <mat-form-field>
+          <mat-label class="omrs-input-label">fecha</mat-label>
+          <input  matInput
+                  formControlName="fecha" id="fecha" >
+
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label class="omrs-input-label">cantidad</mat-label>
+          <input  matInput
+                  formControlName="cantidad" id="cantidad" >
+
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label class="omrs-input-label">precio_Total</mat-label>
+          <input  matInput
+                  formControlName="precio_Total" id="precio_Total" >
+
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label class="omrs-input-label">producto_CPD</mat-label>
+          <input  matInput
+                  formControlName="producto_CPD" id="producto_CPD" >
+
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label class="omrs-input-label">cliente_CC</mat-label>
+          <input  matInput
+                  formControlName="cliente_CC" id="cliente_CC" >
+
+        </mat-form-field>
+      </div>
+    </div>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button type="submit" mat-button color="primary" cdkFocusInitial>
+      Guardar
+    </button>
+  </mat-dialog-actions>
+</form>

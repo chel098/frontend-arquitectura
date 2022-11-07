@@ -16,7 +16,7 @@ export class ProductoComponent implements OnInit {
     await this.getProductList();
   }
  async getProductList() {
-  await this.productService.getProductList().subscribe(=>{
+  await this.productService.getProductList().subscribe(value=>{
     this.listproduct=value;
   });
  }

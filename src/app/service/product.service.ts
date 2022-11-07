@@ -7,12 +7,14 @@ import {producto} from '../models/Producto';
 })
 export class ProductService {
   private baseUrl:string ="http://localhost:8080";
-  constructor(private http: HttpClient) { }
-}
-getProductList(){
-  const url = `${this.baseUrl}/v1/ProductList`;
-  console.log(url);
-  return this.http.get<producto[]>(url);
+  constructor(private http: HttpClient) { 
+
+  }
+  getProductList(){
+      const url = `${this.baseUrl}/v1/ProductList`;
+      console.log(url);
+      return this.http.get<producto[]>(url);
+    }
 }
 
 

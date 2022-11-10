@@ -1,5 +1,5 @@
 export interface proveedor {
-    CPR: number;
-    Nombre:string;
-    Descripcion:string;
+    cpr: number;
+    nombre:string;
+    descripcion:string;
 }

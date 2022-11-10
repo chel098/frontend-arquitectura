@@ -1,1 +1,10 @@
-<p>proveedor works!</p>
+<app-index></app-index>
+    <div *ngFor ="let item of listproveedor ">
+        <ul >
+          <li class="titleName"> <strong>{{item.cpr}} </strong></li>
+          <li class="titleValue"> {{item.nombre}</li>
+          <li class="titleValue"> {{item.descripcion}}</li>
+          <!-- <li> <button (click)="delete(item.cv);" >Eliminar</button> </li>
+          <li> <button routerLink="../updateVenta/{{item.cv}}" >Actualizar</button> </li> -->
+        </ul>
+    </div>

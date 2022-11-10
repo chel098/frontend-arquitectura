@@ -15,10 +15,17 @@ export class ProductoComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     await this.getProductList();
   }
- async getProductList() {
-  await this.productService.getProductList().subscribe(value=>{
-    this.listproduct=value;
-  });
+
+  async getProductList() {
+    await this.productService.getProductList().subscribe(value=>{
+      this.listproduct=value;
+    });
  }
+ delete(id:number){
+
+  this.productService.getDeleteProduct(id).subscribe(value => {
+    console.log(value);
+  });
+}
 
 }

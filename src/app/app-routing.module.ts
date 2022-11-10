@@ -5,6 +5,7 @@ import {VentaComponent} from "./views/venta/venta.component";
 import {ProductoComponent} from "./views/producto/producto.component";
 import {IngresarVentaComponent} from "./views/ingresar-venta/ingresar-venta.component";
 import {ActualizarVentaComponent} from "./views/actualizar-venta/actualizar-venta.component";
+import { ProveedorComponent } from './views/proveedor/proveedor.component';
 
 const routes: Routes = [
   {
@@ -22,16 +23,20 @@ const routes: Routes = [
     component: VentaComponent
   },
   {
-    path: 'producto',
-    component: ProductoComponent
-  },
-  {
     path: 'crearVenta',
     component: IngresarVentaComponent
   },
   {
     path: 'updateVenta/:id',
     component: ActualizarVentaComponent
+  },
+  {
+    path: 'producto',
+    component: ProductoComponent
+  },
+  {
+    path: 'proveedor',
+    component: ProveedorComponent
   }
 
 

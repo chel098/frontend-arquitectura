@@ -1,10 +1,10 @@
 export interface producto{
-    CPD:number;
-    Nombre:string;
-    Descripcion:string;
-    Stock:number;
-    Precio_compra:number;
-    Precio_venta:number;
-    Fecha_vencimiento:string;
-    Proveedor:number;
+    cpd:number;
+    nombre:string;
+    descripcion:string;
+    stock:number;
+    precio_compra:number;
+    precio_venta:number;
+    fecha_vencimiento:string;
+    proveedor_CPR:number;
 }

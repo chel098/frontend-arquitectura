@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,12 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import { ActualizarVentaComponent } from './views/actualizar-venta/actualizar-venta.component';
 import { IngresarProductComponent } from './views/ingresar-product/ingresar-product.component';
+import { initializeKeycloak } from 'src/utils/app.utils';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { AppAuthGuard } from 'src/guard/auth.guard';
+import { ActualizarProductoComponent } from './views/actualizar-producto/actualizar-producto.component';
+import { IngresarClienteComponent } from './views/ingresar-cliente/ingresar-cliente.component';
+import { ActualizarClienteComponent } from './views/actualizar-cliente/actualizar-cliente.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,10 @@ import { IngresarProductComponent } from './views/ingresar-product/ingresar-prod
     VentaComponent,
     IngresarVentaComponent,
     ActualizarVentaComponent,
-    IngresarProductComponent
+    IngresarProductComponent,
+    ActualizarProductoComponent,
+    IngresarClienteComponent,
+    ActualizarClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +53,16 @@ import { IngresarProductComponent } from './views/ingresar-product/ingresar-prod
     MatFormFieldModule,
     MatDialogModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    KeycloakAngularModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{
+    provide: APP_INITIALIZER,
+    useFactory: initializeKeycloak,
+    multi: true,
+    deps: [KeycloakService]
+  },
+   AppAuthGuard,],
+   bootstrap: [AppComponent]
 })
 export class AppModule { }

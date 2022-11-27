@@ -20,12 +20,12 @@ export class ProductoComponent implements OnInit {
     await this.productService.getProductList().subscribe(value=>{
       this.listproduct=value;
     });
- }
- delete(id:number){
+  }
+  delete(id:number){
 
-  this.productService.getDeleteProduct(id).subscribe(value => {
-    console.log(value);
-  });
-}
+    this.productService.getDeleteProduct(id).subscribe(value => {
+      console.log(value);
+    });
+  }
 
 }

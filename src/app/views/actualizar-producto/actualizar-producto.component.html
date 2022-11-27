@@ -1,25 +1,6 @@
-<mat-sidenav-container class="sidenav-container">
-    <mat-sidenav-content>
-      <mat-toolbar color="primary">
-        <mat-toolbar-row>
-          <a href="/">
-            <img src="/favicon.ico" alt="Avatar" class="avatar"/>
-          </a>
-          <h1>E-STORE</h1>
-          <span class="example-spacer"></span>
-          <div>
-            <a mat-button [routerLink]="'/venta'"> Venta </a>
-            <a mat-button [routerLink]="'/producto'"> Producto </a>
-  <!--          <a mat-button [routerLink]="'/main/countries'"> Datos </a>-->
-  <!--          <a mat-button [routerLink]="'/main/predict'"> Predicciones </a>-->
-            <a mat-button [routerLink]="'/crearVenta'"> Crear venta </a>
-          </div>
-        </mat-toolbar-row>
-      </mat-toolbar>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  
-  <form [formGroup]="formProduct" (ngSubmit)="saveProduct()" autocomplete="off">
+<h1 mat-dialog-title>Nueva Venta</h1>
+
+<form [formGroup]="formProduct" (ngSubmit)="update()" autocomplete="off">
     <mat-dialog-content>
   
       <div class="row">
@@ -85,4 +66,3 @@
       </button>
     </mat-dialog-actions>
   </form>
-  

@@ -1,1 +1,9 @@
-<p>cliente works!</p>
+<app-index></app-index>
+    <div *ngFor ="let item of listcliente ">
+        <ul >
+          <li class="titleValue"> {{item.nombre}}</li>
+          <li class="titleValue"> {{item.nit}}</li>
+          <li> <button (click)="delete(item.cc);" >Eliminar</button> </li>
+          <li> <button routerLink="../updateCliente/{{item.cc}}" >Actualizar</button> </li>
+        </ul>
+    </div>

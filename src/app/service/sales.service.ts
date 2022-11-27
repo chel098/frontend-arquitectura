@@ -7,7 +7,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class SalesService {
-  private baseUrl:string ="http://localhost:8080";
+  private baseUrl:string ="http://localhost:8080/sales-service";
   constructor(private http: HttpClient) {
   }
   getSalesList(){
@@ -23,7 +23,7 @@ export class SalesService {
   getDeleteSales(CV: number){
     const url = `${this.baseUrl}/v1/DeleteSale/`+CV;
     console.log(url);
-    return this.http.delete<string>(url);
+    return this.http.delete<string>(url,{responseType:'text' as 'json'});
   }
   getUpdateSales(newventa: any){
     const url = `${this.baseUrl}/v1/ChangeSale`;

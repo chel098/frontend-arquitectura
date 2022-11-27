@@ -1,5 +1,5 @@
 export interface cliente {
-    CC:number;
-    Nombre:string;
-    NIT:string;
+    cc:number;
+    nombre:string;
+    nit:string;
 }

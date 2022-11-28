@@ -1,16 +1,40 @@
 <app-index></app-index>
-    <div *ngFor ="let item of listproduct ">
-        <ul >
-          <li class="titleName"> <strong>{{item.nombre}} </strong></li>
-          <li class="titleValue"> {{item.descripcion}}</li>
-          <li class="titleValue"> {{item.stock}}</li>
-          <li class="titleValue"> {{item.precio_compra}}</li>
-          <li class="titleValue"> {{item.precio_venta}}</li>
-          <li class="titleValue"> {{item.precio_venta}}</li>
-          <li class="titleValue"> {{item.fecha_vencimiento}}</li>
-          <li class="titleValue"> {{item.proveedor_CPR}}</li>
-          <li> <button (click)="delete(item.cpd);" >Eliminar</button> </li>
-          <li> <button routerLink="../updateProducto/{{item.cpd}}" >Actualizar</button> </li>
+
+<li> <button [routerLink]="'/crearProducto'" id="boton1"> Crear Producto"</button> </li>
+
+<table>
+  <thead>
+    <tr>
+      <th>NOMBRE
+      <th>DESCRIPCION
+      <th>STOCK
+      <th>COMPRA
+      <th>VENTA
+      <th>FECHA
+      <th>ACCIONES
+  </thead>
+  
+    <tbody >
+      <tr *ngFor ="let item of listproduct ">
+        <td>{{item.nombre}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>{{item.stock}}</td>
+        <td>{{item.precio_compra}}</td>
+        <td>{{item.precio_venta}}</td>
+        <td>{{item.fecha_vencimiento}}</td>
+      
         
-        </ul>
-    </div>
+        <td>
+          <li> <button routerLink="../updateProducto/{{item.cpd}}" >Actualizar</button> </li>
+        </td>
+        <td>
+          <li> <button (click)="delete(item.cpd);" >Eliminar</button> </li>
+          
+        </td>
+      </tr>
+      
+    </tbody>
+ 
+  
+</table>
+

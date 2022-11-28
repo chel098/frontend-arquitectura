@@ -1,9 +1,33 @@
 <app-index></app-index>
-    <div *ngFor ="let item of listcliente ">
-        <ul >
-          <li class="titleValue"> {{item.nombre}}</li>
-          <li class="titleValue"> {{item.nit}}</li>
-          <li> <button (click)="delete(item.cc);" >Eliminar</button> </li>
+   
+   
+<li> <button [routerLink]="'/crearCliente'" id="boton1"> Crear Cliente"</button> </li>
+    
+<table>
+  <thead>
+    <tr>
+      <th>NOMBRE
+      <th>NIT
+      <th>ACCIONES
+     
+  </thead>
+  
+    <tbody >
+      <tr *ngFor ="let item of listcliente ">
+        <td>{{item.nombre}}</td>
+        <td>{{item.nit}}</td>
+        
+        <td>
           <li> <button routerLink="../updateCliente/{{item.cc}}" >Actualizar</button> </li>
-        </ul>
-    </div>
+        </td>
+        <td>
+          <li> <button (click)="delete(item.cc);" >Eliminar</button> </li>
+          
+        </td>
+      </tr>
+      
+    </tbody>
+ 
+  
+</table>
+

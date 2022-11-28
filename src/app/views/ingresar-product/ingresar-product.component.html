@@ -1,24 +1,6 @@
-<mat-sidenav-container class="sidenav-container">
-    <mat-sidenav-content>
-      <mat-toolbar color="primary">
-        <mat-toolbar-row>
-          <a href="/">
-            <img src="/favicon.ico" alt="Avatar" class="avatar"/>
-          </a>
-          <h1>E-STORE</h1>
-          <span class="example-spacer"></span>
-          <div>
-            <a mat-button [routerLink]="'/venta'"> Venta </a>
-            <a mat-button [routerLink]="'/producto'"> Producto </a>
-  <!--          <a mat-button [routerLink]="'/main/countries'"> Datos </a>-->
-  <!--          <a mat-button [routerLink]="'/main/predict'"> Predicciones </a>-->
-            <a mat-button [routerLink]="'/crearVenta'"> Crear venta </a>
-          </div>
-        </mat-toolbar-row>
-      </mat-toolbar>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  
+<app-index></app-index>
+<div class="login-box">
+  <h2>Ingresar Producto</h2>
   <form [formGroup]="formProduct" (ngSubmit)="saveProduct()" autocomplete="off">
     <mat-dialog-content>
   
@@ -40,21 +22,21 @@
           
           <mat-form-field>
             <mat-label class="omrs-input-label">stock</mat-label>
-            <input  matInput
+            <input type="number" matInput
                     formControlName="stock" id="stock" >
   
           </mat-form-field>
 
           <mat-form-field>
             <mat-label class="omrs-input-label">precio_compra</mat-label>
-            <input  matInput
+            <input type="number" matInput
                     formControlName="precio_compra" id="precio_compra" >
   
           </mat-form-field>
 
           <mat-form-field>
             <mat-label class="omrs-input-label">precio_venta</mat-label>
-            <input  matInput
+            <input type="number" matInput
                     formControlName="precio_venta" id="precio_venta" >
   
           </mat-form-field>
@@ -63,14 +45,14 @@
           
           <mat-form-field>
             <mat-label class="omrs-input-label">fecha_vencimiento</mat-label>
-            <input  matInput
+            <input type="date" matInput
                     formControlName="fecha_vencimiento" id="fecha_vencimiento" >
   
           </mat-form-field>  
           
           <mat-form-field>
             <mat-label class="omrs-input-label">proveedor_CPR</mat-label>
-            <input  matInput
+            <input type="number" matInput
                     formControlName="proveedor_CPR" id="proveedor_CPR" >
           </mat-form-field>  
         
@@ -79,10 +61,17 @@
   
     </mat-dialog-content>
   
-    <mat-dialog-actions>
-      <button type="submit" mat-button color="primary" cdkFocusInitial>
-        Guardar
-      </button>
-    </mat-dialog-actions>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <mat-dialog-actions>
+        <button type="submit" mat-button color="primary" cdkFocusInitial>
+          Guardar
+        </button>
+      </mat-dialog-actions>
+      </a>
   </form>
-  
+</div>

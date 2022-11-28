@@ -1,4 +1,7 @@
-<form [formGroup]="formCliente" (ngSubmit)="update()" autocomplete="off">
+<app-index></app-index>
+<div class="login-box">
+  <h2>Actualizar cliente</h2>
+  <form [formGroup]="formCliente" (ngSubmit)="update()" autocomplete="off">
     <mat-dialog-content>
   
       <div class="row">
@@ -21,9 +24,18 @@
   
     </mat-dialog-content>
   
-    <mat-dialog-actions>
-      <button type="submit" mat-button color="primary" cdkFocusInitial>
-        Guardar
-      </button>
-    </mat-dialog-actions>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <mat-dialog-actions>
+        <button type="submit" mat-button color="primary" cdkFocusInitial>
+          Guardar
+        </button>
+      </mat-dialog-actions>
+      </a>
   </form>
+  
+</div>

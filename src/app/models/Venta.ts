@@ -1,6 +1,6 @@
 export interface venta {
    cv: number
-   fecha?: string;
+   fecha: string;
    cantidad: number;
    precio_Total: number;
    producto_CPD: number;

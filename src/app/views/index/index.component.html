@@ -1,19 +1,20 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="light" style="background-color: #414472;" >
       <mat-toolbar-row>
-        <a href="/">
-          <img src="/favicon.ico" alt="Avatar" class="avatar"/>
-        </a>
-        <h1>Covid-19</h1>
+        
+        <h1>Computer-Store</h1>
         <span class="example-spacer"></span>
         <div>
           <a mat-button [routerLink]="'/venta'"> Venta </a>
           <a mat-button [routerLink]="'/producto'"> Producto </a>
 <!--          <a mat-button [routerLink]="'/main/countries'"> Datos </a>-->
 <!--          <a mat-button [routerLink]="'/main/predict'"> Predicciones </a>-->
-          <a mat-button [routerLink]="'/crearVenta'"> Crear venta </a>
-          <a mat-button [routerLink]="'/proveedor'"> prov </a>
+          <!-- <a mat-button [routerLink]="'/crearVenta'"> Crear venta </a>
+          <a mat-button [routerLink]="'/crearProducto'"> Crear Producto </a> -->
+          <a mat-button [routerLink]="'/cliente'"> Cliente </a>
+          <!-- <a mat-button [routerLink]="'/crearCliente'"> Crear Cliente </a> -->
+          <a mat-button (click)="logout()" > Cerrar sesion </a>
           
         </div>
       </mat-toolbar-row>

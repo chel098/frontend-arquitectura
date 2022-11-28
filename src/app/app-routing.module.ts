@@ -40,7 +40,7 @@ const routes: Routes = [
   {
     path: 'updateVenta/:id',
     component: ActualizarVentaComponent,
-    canActivate: [AppAuthGuard], data: {roles:['USER','ADMIN']}
+    canActivate: [AppAuthGuard], data: {roles:['ADMIN']}
   },
   {
     path: 'producto',

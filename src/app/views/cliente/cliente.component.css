@@ -1,0 +1,74 @@
+body {
+    background: #f1f0f0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  table {
+    background: #81a0d9;
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    margin: 1em;
+    width: 98%;
+    height: 85%;
+    
+  }
+  th {
+    border-bottom: 1px solid #364043;
+    color: #E2B842;
+    font-size:25px;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    text-align: left;
+  }
+  td {
+    color: #fff;
+    font-weight: 400;
+    padding: 0.65em 1em;
+    font-size: 20px;
+  }
+  .disabled td {
+    color: #4F5F64;
+  }
+  tbody tr {
+    transition: background 0.25s ease;
+  }
+  tbody tr:hover {
+    background: #b3c0c4;
+  }
+  
+  
+  
+  /* CSS */
+  button {
+    background-color: #531fd8;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-1:hover,
+  .button-1:focus {
+    background-color: #F082AC;
+  }
+
+
+  

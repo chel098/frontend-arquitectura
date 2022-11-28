@@ -20,7 +20,7 @@ export class AppAuthGuard extends KeycloakAuthGuard {
     state: RouterStateSnapshot
   ): Promise<boolean | UrlTree> {
     return new Promise(async (resolve, reject) => {
-      alert(this.roles)  
+     
       if (!this.authenticated) {
         this.keycloakAngular.login();
         return;

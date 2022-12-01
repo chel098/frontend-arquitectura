@@ -15,6 +15,12 @@ export class ProductService {
       console.log(url);
       return this.http.get<producto[]>(url);
     }
+  getClient(CC:number){
+    const url = `${this.baseUrl}/v1/findByName/`+CC;
+    console.log(url);
+    return this.http.get<producto>(url);
+   
+  }
   getAddProduct(newproduct:any){
     const url = `${this.baseUrl}/v1/AddProduct`;
     console.log(url);
@@ -24,7 +30,7 @@ export class ProductService {
   getDeleteProduct(CPD:number){
     const url = `${this.baseUrl}/v1/DeleteProduct/`+CPD;
     console.log(url);
-    return this.http.delete<string>(url);
+    return this.http.delete<string>(url,{responseType:'text' as 'json'});
   
   }
   getUpdateProduct(newproduct:any){
@@ -36,7 +42,7 @@ export class ProductService {
   getProducto(CPD:number){
     const url = `${this.baseUrl}/v1/FindProduct/`+CPD;
     console.log(url);
-    return this.http.get<producto>(url);
+    return this.http.get<producto>(url,{responseType:'text' as 'json'});
    
   }
 }

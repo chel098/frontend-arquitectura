@@ -27,5 +27,12 @@ export class ProductoComponent implements OnInit {
       console.log(value);
     });
   }
+  async getNamelist(id:number){
+      this.productService.getClient(id).subscribe(value =>{
+        console.log(value)
+      })
+        
+      }
+  }
 
-}
+

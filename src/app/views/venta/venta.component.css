@@ -1,9 +1,9 @@
 body {
-    background: #f1f0f0;
+    background: #a02121;
     font-family: 'Open Sans', sans-serif;
   }
   table {
-    background: #81a0d9;
+    background: #121f36;
     border-radius: 0.25em;
     border-collapse: collapse;
     margin: 1em;
@@ -13,7 +13,7 @@ body {
   }
   th {
     border-bottom: 1px solid #364043;
-    color: #E2B842;
+    color: #a695d1;
     font-size:25px;
     font-weight: 600;
     padding: 0.5em 1em;
@@ -32,7 +32,7 @@ body {
     transition: background 0.25s ease;
   }
   tbody tr:hover {
-    background: #b3c0c4;
+    background: #11586d;
   }
   
   

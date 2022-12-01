@@ -55,7 +55,7 @@ const routes: Routes = [
   {
     path: 'updateProducto/:id',
     component: ActualizarProductoComponent,
-    canActivate: [AppAuthGuard], data: {roles:['USER','ADMIN']}
+    canActivate: [AppAuthGuard], data: {roles:['ADMIN']}
   },
   {
     path: 'proveedor',
@@ -75,7 +75,7 @@ const routes: Routes = [
   {
     path: 'updateCliente/:id',
     component: ActualizarClienteComponent,
-    canActivate: [AppAuthGuard], data: {roles:['USER','ADMIN']}
+    canActivate: [AppAuthGuard], data: {roles:['ADMIN']}
   },
   {
     path: 'error',
